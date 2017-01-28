@@ -1,9 +1,23 @@
 h1 {
   margin: 0px;
+  font-size: 34px;
 }
 
 h2 {
+  font-size: 18px;
   font-weight: bold;
   color: #F16522;
   margin-top: 0px;
+}
+
+h3 {
+  font-szie: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
 }
