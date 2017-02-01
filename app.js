@@ -41,7 +41,7 @@ function questionTwo(){
   }
 };
 
-questionTwo()
+questionTwo();
 
 function questionThree(){
 
@@ -58,6 +58,7 @@ function questionThree(){
     console.log('Wrong!');
   }
 };
+questionThree();
 
 function questionFour(){
 
@@ -75,6 +76,8 @@ function questionFour(){
   }
 };
 
+questionFour();
+
 function questionFive(){
 
   //Question Five //
@@ -91,6 +94,8 @@ function questionFive(){
     console.log('Wrong!');
   }
 };
+
+questionFive();
 
 function questionSix(){
 
@@ -114,6 +119,7 @@ function questionSix(){
     }
   }
 };
+questionSix();
 
 function questionSeven(){
 
@@ -137,9 +143,13 @@ function questionSeven(){
   console.log(UserName+ ' tried ' + userAnswerAttempts + ' time(s).');
 };
 
+questionSeven();
+
 function totalScore(){
 
   //Display the score of the game//
   console.log('You got ' + correctAnswer + ' out of 7 questions correctly.')
   alert('Good job  '+ UserName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
 };
+
+totalScore();
