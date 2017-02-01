@@ -1,9 +1,10 @@
 function name (){
 
   //Ask User's Name//
-  var UserName = prompt ('What is your name?');
-  alert ('Welcome ' + UserName + '!');
-  console.log('Welcome ' + UserName);
+  var userName = prompt ('What is your name?');
+  alert ('Welcome ' + userName + '!');
+  console.log('Welcome ' + userName);
+  window.userName = userName;
   //Count the correct answers from the users//
 };
 var correctAnswer = 0;
@@ -140,7 +141,7 @@ function questionSeven(){
       alert ('I\'m not from ' + userAnswerSeven +'. Try again!');
     }
   } while (answerSeven.indexOf(userAnswerSeven.toUpperCase()) === -1 && userAnswerAttempts < 6)
-  console.log(UserName+ ' tried ' + userAnswerAttempts + ' time(s).');
+  console.log(userName+ ' tried ' + userAnswerAttempts + ' time(s).');
 };
 
 questionSeven();
@@ -149,7 +150,7 @@ function totalScore(){
 
   //Display the score of the game//
   console.log('You got ' + correctAnswer + ' out of 7 questions correctly.')
-  alert('Good job  '+ UserName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
+  alert('Good job  '+ userName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
 };
 
 totalScore();
