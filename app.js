@@ -7,6 +7,7 @@ function name (){
   //Count the correct answers from the users//
 };
 var correctAnswer = 0;
+name();
 function questionOne() {
 
   //Question One //
@@ -22,6 +23,7 @@ function questionOne() {
     console.log('Wrong!');
   }
 };
+questionOne();
 
 function questionTwo(){
 
@@ -38,6 +40,8 @@ function questionTwo(){
     console.log('Wrong!');
   }
 };
+
+questionTwo()
 
 function questionThree(){
 
@@ -70,56 +74,72 @@ function questionFour(){
     console.log('Wrong!');
   }
 };
-//Question Five //
-var questionFive = prompt('Q5. Which are the organization that Kenny hasn\'t worked previously?  A. Microsoft  B.Best Buy  C. Seattle Seahawks  D. University of Washington');
-// Ask users question with input to find out whether user's input is in an array
-var answerFive = ['B','C'];
-// Multiple answers in the array
-if (answerFive.indexOf(questionFive.toUpperCase()) !== -1) {
-  alert('You got it right! ');
-  console.log('You got it right!');
-  correctAnswer += 1;
-} else {
-  alert('Wrong!!! ');
-  console.log('Wrong!');
-}
-//Question Six //
-var answerSix = 3;
-var userPick = prompt('Q6. Guess my number from 1 to 10');
-var i = 0;
-// Ask users question to guess number from 1 to 10, and tell users whether their answer is correct, too high, or too low w/ four times//
-for (var i = 0; i < 4 ; i++) {
-  if (answerSix == userPick) {
-    console.log ('You got it right!');
-    alert ('You got it right!');
-    correctAnswer += 1;
-    break;
-  } else if (answerSix > userPick) {
-    console.log ('Too low');
-    userPick = parseInt(prompt('Guess my number from 1 to 10'));
-  } else {
-    console.log ('Too high');
-    userPick = parseInt(prompt('Guess my number from 1 to 10'));
-  }
-}
-//Question Seven //
-var userAnswerAttempts = 0;
-var answerSeven = ['KOREA', 'CALIFORNIA'];
-// Ask user question to guess input inside of strings, and count how many times user attempts to answer //
-do {
-  userAnswerAttempts += 1;
-  var userAnswerSeven = prompt('Q7. Can you guess where I was from?');
-  // Ask users question to guess input inside of strings, and tell users whether their answer is correct or not in six times//
-  if (answerSeven.indexOf(userAnswerSeven.toUpperCase()) !== -1) {
-    console.log ('Yes,I\'m from ' + userAnswerSeven.toUpperCase());
-    alert ('You got it right! \nI\'m from ' + userAnswerSeven);
+
+function questionFive(){
+
+  //Question Five //
+  var questionFive = prompt('Q5. Which are the organization that Kenny hasn\'t worked previously?  A. Microsoft  B.Best Buy  C. Seattle Seahawks  D. University of Washington');
+  // Ask users question with input to find out whether user's input is in an array
+  var answerFive = ['B','C'];
+  // Multiple answers in the array
+  if (answerFive.indexOf(questionFive.toUpperCase()) !== -1) {
+    alert('You got it right! ');
+    console.log('You got it right!');
     correctAnswer += 1;
   } else {
-    console.log ('I\'m not from ' + userAnswerSeven.toUpperCase() +'. Try again!');
-    alert ('I\'m not from ' + userAnswerSeven +'. Try again!');
+    alert('Wrong!!! ');
+    console.log('Wrong!');
   }
-} while (answerSeven.indexOf(userAnswerSeven.toUpperCase()) === -1 && userAnswerAttempts < 6)
-console.log(UserName+ ' tried ' + userAnswerAttempts + ' time(s).');
-//Display the score of the game//
-console.log('You got ' + correctAnswer + ' out of 7 questions correctly.')
-alert('Good job  '+ UserName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
+};
+
+function questionSix(){
+
+  //Question Six //
+  var answerSix = 3;
+  var userPick = prompt('Q6. Guess my number from 1 to 10');
+  var i = 0;
+  // Ask users question to guess number from 1 to 10, and tell users whether their answer is correct, too high, or too low w/ four times//
+  for (var i = 0; i < 4 ; i++) {
+    if (answerSix == userPick) {
+      console.log ('You got it right!');
+      alert ('You got it right!');
+      correctAnswer += 1;
+      break;
+    } else if (answerSix > userPick) {
+      console.log ('Too low');
+      userPick = parseInt(prompt('Guess my number from 1 to 10'));
+    } else {
+      console.log ('Too high');
+      userPick = parseInt(prompt('Guess my number from 1 to 10'));
+    }
+  }
+};
+
+function questionSeven(){
+
+  //Question Seven //
+  var userAnswerAttempts = 0;
+  var answerSeven = ['KOREA', 'CALIFORNIA'];
+  // Ask user question to guess input inside of strings, and count how many times user attempts to answer //
+  do {
+    userAnswerAttempts += 1;
+    var userAnswerSeven = prompt('Q7. Can you guess where I was from?');
+    // Ask users question to guess input inside of strings, and tell users whether their answer is correct or not in six times//
+    if (answerSeven.indexOf(userAnswerSeven.toUpperCase()) !== -1) {
+      console.log ('Yes,I\'m from ' + userAnswerSeven.toUpperCase());
+      alert ('You got it right! \nI\'m from ' + userAnswerSeven);
+      correctAnswer += 1;
+    } else {
+      console.log ('I\'m not from ' + userAnswerSeven.toUpperCase() +'. Try again!');
+      alert ('I\'m not from ' + userAnswerSeven +'. Try again!');
+    }
+  } while (answerSeven.indexOf(userAnswerSeven.toUpperCase()) === -1 && userAnswerAttempts < 6)
+  console.log(UserName+ ' tried ' + userAnswerAttempts + ' time(s).');
+};
+
+function totalScore(){
+
+  //Display the score of the game//
+  console.log('You got ' + correctAnswer + ' out of 7 questions correctly.')
+  alert('Good job  '+ UserName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
+};
