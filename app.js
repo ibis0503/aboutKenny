@@ -1,19 +1,21 @@
-function name (){
+// Count correctAnswer for totalScore later //
+var correctAnswer = 0;
 
+// Create function user name //
+function name (){
   //Ask User's Name//
   var userName = prompt ('What is your name?');
   alert ('Welcome ' + userName + '!');
   console.log('Welcome ' + userName);
   window.userName = userName;
-  //Count the correct answers from the users//
 };
-var correctAnswer = 0;
 name();
-function questionOne() {
 
-  //Question One //
-  var answerOne = prompt('Q1. Kenny\'s currently working at Xbox Team (y/n or yes/no)');
+//Create function questionOne //
+function questionOne() {
   // Ask users question with input//
+  var answerOne = prompt('Q1. Kenny\'s currently working at Xbox Team (y/n or yes/no)');
+  // If...Else Statements begins
   if (answerOne.toUpperCase() === 'NO' || answerOne.toUpperCase() === 'N' || answerOne.toUpperCase() === 'NOPE' || answerOne.toUpperCase() === 'NAH') {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
@@ -26,11 +28,11 @@ function questionOne() {
 };
 questionOne();
 
+// Create function questionTwo //
 function questionTwo(){
-
-  //Question Two //
-  var answerTwo = prompt('Q2. Kenny grauated from Harvard Law School (y/n or yes/no)');
   // Ask users question with input
+  var answerTwo = prompt('Q2. Kenny grauated from Harvard Law School (y/n or yes/no)');
+  // If...Else Statements begins
   if (answerTwo.toUpperCase() === 'NO' || answerTwo.toUpperCase() === 'N' || answerTwo.toUpperCase() === 'NOPE' || answerTwo.toUpperCase() === 'NAH') {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
@@ -41,14 +43,13 @@ function questionTwo(){
     console.log('Wrong!');
   }
 };
-
 questionTwo();
 
+// Create function questionThree //
 function questionThree(){
-
-  //Question Three //
-  var answerThree = prompt('Q3. Kenny recently graduated from college (y/n or yes/no)');
   // Ask users question with input
+  var answerThree = prompt('Q3. Kenny recently graduated from college (y/n or yes/no)');
+  // If...Else Statements begins
   if (answerThree.toUpperCase() === 'NO' || answerThree.toUpperCase() === 'N' || answerThree.toUpperCase() === 'NOPE' || answerThree.toUpperCase() === 'NAH') {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
@@ -61,11 +62,11 @@ function questionThree(){
 };
 questionThree();
 
+// Create function questionFour //
 function questionFour(){
-
-  //Question Four //
-  var answerFour = prompt('Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (y/n or yes/no)');
   // Ask users question with input
+  var answerFour = prompt('Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (y/n or yes/no)');
+  // If...Else Statements begins
   if (answerFour.toUpperCase() === 'NO' || answerFour.toUpperCase() === 'N' || answerFour.toUpperCase() === 'NOPE' || answerFour.toUpperCase() === 'NAH') {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
@@ -76,16 +77,15 @@ function questionFour(){
     console.log('Wrong!');
   }
 };
-
 questionFour();
 
+// Create function questionFive //
 function questionFive(){
-
-  //Question Five //
-  var questionFive = prompt('Q5. Which are the organization that Kenny hasn\'t worked previously?  A. Microsoft  B.Best Buy  C. Seattle Seahawks  D. University of Washington');
   // Ask users question with input to find out whether user's input is in an array
-  var answerFive = ['B','C'];
+  var questionFive = prompt('Q5. Which are the organization that Kenny hasn\'t worked previously?  A. Microsoft  B.Best Buy  C. Seattle Seahawks  D. University of Washington');
   // Multiple answers in the array
+  var answerFive = ['B','C'];
+  // If...Else Statements begins
   if (answerFive.indexOf(questionFive.toUpperCase()) !== -1) {
     alert('You got it right! ');
     console.log('You got it right!');
@@ -95,25 +95,28 @@ function questionFive(){
     console.log('Wrong!');
   }
 };
-
 questionFive();
 
+// Create function questionSix //
 function questionSix(){
-
-  //Question Six //
-  var answerSix = 3;
+  // Ask users question with input to find out whether user's input is in an array
   var userPick = prompt('Q6. Guess my number from 1 to 10');
+  // Here is the answer for answerSix
+  var answerSix = 3;
   var i = 0;
-  // Ask users question to guess number from 1 to 10, and tell users whether their answer is correct, too high, or too low w/ four times//
+  // Ask users question for four times //
   for (var i = 0; i < 4 ; i++) {
     if (answerSix == userPick) {
       console.log ('You got it right!');
       alert ('You got it right!');
       correctAnswer += 1;
+      // Break and move to next question if user pick answerSix //
       break;
+    // If userPick is higher than answerSix //
     } else if (answerSix > userPick) {
       console.log ('Too low');
       userPick = parseInt(prompt('Guess my number from 1 to 10'));
+    // If userPick is lower than answerSix //
     } else {
       console.log ('Too high');
       userPick = parseInt(prompt('Guess my number from 1 to 10'));
@@ -122,16 +125,17 @@ function questionSix(){
 };
 questionSix();
 
+// Create function questionSeven //
 function questionSeven(){
-
-  //Question Seven //
+  // Count the number of attemps that user try for answer //
   var userAnswerAttempts = 0;
+  // Here are the answer for answerSeven //
   var answerSeven = ['KOREA', 'CALIFORNIA'];
   // Ask user question to guess input inside of strings, and count how many times user attempts to answer //
   do {
     userAnswerAttempts += 1;
     var userAnswerSeven = prompt('Q7. Can you guess where I was from?');
-    // Ask users question to guess input inside of strings, and tell users whether their answer is correct or not in six times//
+    // Ask users question to guess input inside of strings, and tell users whether their answer is correct or not //
     if (answerSeven.indexOf(userAnswerSeven.toUpperCase()) !== -1) {
       console.log ('Yes,I\'m from ' + userAnswerSeven.toUpperCase());
       alert ('You got it right! \nI\'m from ' + userAnswerSeven);
@@ -140,17 +144,16 @@ function questionSeven(){
       console.log ('I\'m not from ' + userAnswerSeven.toUpperCase() +'. Try again!');
       alert ('I\'m not from ' + userAnswerSeven +'. Try again!');
     }
+  // until user pick right answer or in six times //
   } while (answerSeven.indexOf(userAnswerSeven.toUpperCase()) === -1 && userAnswerAttempts < 6)
   console.log(userName+ ' tried ' + userAnswerAttempts + ' time(s).');
 };
-
 questionSeven();
 
+// Create function totalScore //
 function totalScore(){
-
   //Display the score of the game//
   console.log('You got ' + correctAnswer + ' out of 7 questions correctly.')
   alert('Good job  '+ userName + ', '+ '\nyou got ' + correctAnswer + ' out of 7 questions correctly.')
 };
-
 totalScore();
