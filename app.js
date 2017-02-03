@@ -11,12 +11,15 @@ function name (){
 };
 name();
 
+var answers = ['NO','NO','NO','NO'];
+var questions = ['Q1. Kenny\'s currently working at Xbox Team (yes/no)', 'Q2. Kenny grauated from Harvard Law School (yes/no)', 'Q3. Kenny recently graduated from college (yes/no)', 'Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (yes/no)','Q5. My favorite color is white (yes/no)'];
+
 //Create function questionOne //
 function questionOne() {
   // Ask users question with input//
-  var answerOne = prompt('Q1. Kenny\'s currently working at Xbox Team (y/n or yes/no)');
+  var answerOne = prompt(questions[0]);
   // If...Else Statements begins
-  if (answerOne.toUpperCase() === 'NO' || answerOne.toUpperCase() === 'N' || answerOne.toUpperCase() === 'NOPE' || answerOne.toUpperCase() === 'NAH') {
+  if (answerOne.toUpperCase() === answers[0]) {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
     console.log('You got it right!');
@@ -31,9 +34,9 @@ questionOne();
 // Create function questionTwo //
 function questionTwo(){
   // Ask users question with input
-  var answerTwo = prompt('Q2. Kenny grauated from Harvard Law School (y/n or yes/no)');
+  var answerTwo = prompt(questions[1]);
   // If...Else Statements begins
-  if (answerTwo.toUpperCase() === 'NO' || answerTwo.toUpperCase() === 'N' || answerTwo.toUpperCase() === 'NOPE' || answerTwo.toUpperCase() === 'NAH') {
+  if (answerTwo.toUpperCase() === answers[1]) {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
     console.log('You got it right!');
@@ -48,9 +51,9 @@ questionTwo();
 // Create function questionThree //
 function questionThree(){
   // Ask users question with input
-  var answerThree = prompt('Q3. Kenny recently graduated from college (y/n or yes/no)');
+  var answerThree = prompt(questions[2]);
   // If...Else Statements begins
-  if (answerThree.toUpperCase() === 'NO' || answerThree.toUpperCase() === 'N' || answerThree.toUpperCase() === 'NOPE' || answerThree.toUpperCase() === 'NAH') {
+  if (answerThree.toUpperCase() === answers[2]) {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
     console.log('You got it right!');
@@ -65,9 +68,9 @@ questionThree();
 // Create function questionFour //
 function questionFour(){
   // Ask users question with input
-  var answerFour = prompt('Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (y/n or yes/no)');
+  var answerFour = prompt(questions[3]);
   // If...Else Statements begins
-  if (answerFour.toUpperCase() === 'NO' || answerFour.toUpperCase() === 'N' || answerFour.toUpperCase() === 'NOPE' || answerFour.toUpperCase() === 'NAH') {
+  if (answerFour.toUpperCase() === answers[3]) {
     // This console.log will execute as long as one of all four conditions evaluates to 'True'//
     alert('You got it right! ');
     console.log('You got it right!');
