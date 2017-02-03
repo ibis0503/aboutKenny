@@ -20,7 +20,7 @@ function guessingGame() {
 
     for (var i = 0; i < questions.length; i++) {
       var userAnswer = prompt(questions[i]);
-      if (userAnswer.toUpperCase() == answers[i]) {
+      if (userAnswer.toUpperCase() === answers[i]) {
         console.log('You got it right!');
         alert('You got it right!');
         correctAnswer += 1;
