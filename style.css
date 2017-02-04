@@ -1,23 +1,125 @@
+body {
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.box {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+}
+
+.left {
+  left: 0;
+  position: fixed;
+
+}
+
+.background-image {
+  height: 100vh;
+  background-image: url(../aboutKenny/images/profile.jpg);
+  background-size: cover;
+  background-position: center top;
+}
+
+.right {
+  right: 0;
+}
+
+.resume {
+  margin: 100px;
+}
+
+.introduction {
+  padding-top: 10%;
+}
+
+.hello {
+  min-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+#button {
+  background-color: #F16522;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.work-experience, .education{
+  padding-top: 15%;
+}
+
+.title {
+  padding-bottom: 5%;
+}
+
+.list {
+  padding-bottom: 5%;
+}
+
+@font-face {
+  font-family: 'Suranna', serif;
+  font-family: font-family: 'Roboto', sans-serif;
+  src: <link href="https://fonts.googleapis.com/css?family=Roboto|Suranna" rel="stylesheet">
+}
+
 h1 {
-  margin: 0px;
-  font-size: 34px;
+  font-family: 'Suranna';
+  font-weight: 100;
+  margin: 0;
+  color: #000000;
+  line-height: 1;
+  font-size: 32px;
+}
+
+span {
+  font-family: 'Suranna';
+  color: #F16522;
 }
 
 h2 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #F16522;
-  margin-top: 0px;
+  font-family: 'Suranna';
+  font-weight: 100;
+  margin: 0;
+  color: #000000;
+  line-height: 1;
+  font-size: 24px;
 }
 
 h3 {
-  font-szie: 16px;
+  font-family: 'Roboto';
+  color: #000000;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 5px;
 }
 
-h4 {
+li {
+  font-family: 'Roboto';
+  color: #7b7b7b;
+  font-weight: normal;
   font-size: 14px;
+  line-height: 32px;
+  list-style-type: none;
 }
+
 
 p {
+  font-family: 'Roboto';
+  color: #7b7b7b;
+  font-weight: normal;
   font-size: 14px;
+  line-height: 32px;
 }

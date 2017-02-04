@@ -15,12 +15,13 @@ function guessingGame() {
 
   // Create function from question 1 to 5 //
   function questionOnetoFive() {
-    var answers = ['NO','NO','NO','NO','YES'];
-    var questions = ['Q1. Kenny\'s currently working at Xbox Team (y/n or yes/no)', 'Q2. Kenny grauated from Harvard Law School (y/n or yes/no)', 'Q3. Kenny recently graduated from college (y/n or yes/no)', 'Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (y/n or yes/no)','Q5. My favorite color is white (yes / no)'];
+    var answers1 = ['NO','NO','NO','NO','YES'];
+    var answers2 = ['N','N','N','N','Y'];
+    var questions = ['Q1. Kenny\'s currently working at Xbox Team (y/n or yes/no)', 'Q2. Kenny grauated from Harvard Law School (y/n or yes/no)', 'Q3. Kenny recently graduated from college (y/n or yes/no)', 'Q4. Kenny has bachelor\'s degree in Human Centered Design & Engineering  (y/n or yes/no)','Q5. My favorite color is white (y/n or yes/no)'];
 
     for (var i = 0; i < questions.length; i++) {
       var userAnswer = prompt(questions[i]);
-      if (userAnswer.toUpperCase() === answers[i]) {
+      if (userAnswer.toUpperCase() === answers1[i] || userAnswer.toUpperCase() === answers2[i]) {
         console.log('You got it right!');
         alert('You got it right!');
         correctAnswer += 1;
@@ -73,7 +74,7 @@ function guessingGame() {
       // Ask users question to guess input inside of strings, and tell users whether their answer is correct or not //
       if (answerSeven.indexOf(userAnswerSeven.toUpperCase()) !== -1) {
         console.log ('Yes,I\'m from ' + userAnswerSeven.toUpperCase());
-        alert ('You got it right! \nI\'m from ' + userAnswerSeven);
+        alert ('You got it right! \nI\'m from ' + answerSeven[0] + ', ' + answerSeven[1]);
         correctAnswer += 1;
       } else {
         console.log ('I\'m not from ' + userAnswerSeven.toUpperCase() +'. Try again!');
